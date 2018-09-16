@@ -14,6 +14,9 @@ steps:
       choco install mingw
       refreshenv
     displayName: 'Install build tools'
+    
+  - script: dir /s c:\tools
+    displayName: 'Show installed tools'
 
-  - script: make -j
+  - script: mingw32-make -j
     displayName: 'Build'
