@@ -13,4 +13,7 @@ steps:
   - script: |
       choco install mingw
       refreshenv
-    displayName: 'Install mingw compiler'
+    displayName: 'Install build tools'
+
+  - displayName: 'Build'
+    script: make -j
