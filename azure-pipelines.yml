@@ -12,4 +12,5 @@ steps:
 
   - script: |
       choco install mingw
+      refreshenv
     displayName: 'Install mingw compiler'
