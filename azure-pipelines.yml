@@ -15,5 +15,5 @@ steps:
       refreshenv
     displayName: 'Install build tools'
 
-  - displayName: 'Build'
-    script: make -j
+  - script: make -j
+    displayName: 'Build'
