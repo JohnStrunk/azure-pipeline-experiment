@@ -15,8 +15,12 @@ steps:
       refreshenv
     displayName: 'Install build tools'
     
-  - script: dir /s c:\tools
+  - script: |
+      dir /s c:\tools
     displayName: 'Show installed tools'
 
-  - script: mingw32-make -j
+  - script: |
+      set PATH=%PATH%;C:\tools\mingw64\bin
+      set
+      mingw32-make -j
     displayName: 'Build'
